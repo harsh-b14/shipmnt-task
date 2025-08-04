@@ -1,8 +1,8 @@
 import { model, Schema } from "mongoose";
 
 const shipmntsSchema  = new Schema({
-    shipmentNumber:{
-        type: Number,
+    shipment_number:{
+        type: String
     },
     origin: {
         required: true,
@@ -14,10 +14,6 @@ const shipmntsSchema  = new Schema({
     },
     hops: [{
         type: String
-    }],
-    flights: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Flight'
     }]
 })
 

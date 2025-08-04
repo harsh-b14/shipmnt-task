@@ -18,17 +18,21 @@ const FlightSchema = new Schema({
         required: true
     },
     departure: {
-        type: Date(),
+        type: Date,
         required: true
     },
     arrival: {
-        type: Date(),
+        type: Date,
         required: true
     },
     status: {
         type: String,
         enum: ["in-transit","landed"],
         default: "in-transit"
+    },
+    shipment_number: {
+        type: Number,
+        ref: 'Shipment'
     }
 })
 
